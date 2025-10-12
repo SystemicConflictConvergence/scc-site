@@ -4,15 +4,21 @@
   <meta charset="UTF-8">
   <title>Systemic Conflict Convergence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    /* 50% gray background */
+
+<!-- ✅ STYLE ✅ -->
+
+
+<style>
+    /* Page background and text */
     html, body {
       height: 100%;
       margin: 0;
-      background: #808080;
+      background: #808080; /* 50% gray */
       color: #ffffff;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
+
+    /* Centered card */
     .wrap {
       min-height: 100%;
       display: grid;
@@ -21,12 +27,14 @@
     }
     .card {
       max-width: 720px;
-      background: rgba(0,0,0,0.35);   /* subtle contrast panel */
+      background: rgba(0,0,0,0.35);
       border: 1px solid rgba(255,255,255,0.2);
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 10px 24px rgba(0,0,0,0.35);
     }
+
+    /* Headings and text */
     h1 {
       margin: 0 0 0.75rem 0;
       font-size: 2rem;
@@ -46,6 +54,8 @@
       font-size: 0.9rem;
       color: #e0e0e0;
     }
+
+    /* Footer */
     .footer {
       margin-top: 1.5rem;
       font-size: 0.85rem;
@@ -53,6 +63,8 @@
       border-top: 1px solid rgba(255,255,255,0.15);
       padding-top: 1rem;
     }
+
+    /* Links */
     a {
       color: #c9e6ff;
       text-decoration: none;
@@ -60,6 +72,8 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Badge */
     .badge {
       display: inline-block;
       background: rgba(255,255,255,0.1);
@@ -69,11 +83,58 @@
       font-size: 0.85rem;
       margin-bottom: 1rem;
     }
+
+    /* ✅ Nav buttons as a grid */
+    .nav-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+      gap: 0.75rem;
+      margin: 1.5rem auto;
+      max-width: 600px; /* keeps the block centered */
+      text-align: center;
+    }
+    .nav-buttons button {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      width: 100%; /* fills the grid cell */
+    }
+    .nav-buttons button:hover {
+      background: rgba(255,255,255,0.25);
+    }
   </style>
 </head>
+
+
+<!-- ✅ BODY ✅ -->
+
 <body>
   <main class="wrap">
     <section class="card" role="region" aria-label="SCC coming soon announcement">
+
+<section class="card" role="region" aria-label="SCC coming soon announcement">
+  
+  <!-- ✅ Navigation Header -->
+      <!-- ✅ Buttons -->
+  <h2 class="nav-header">Explore the Chambers</h2>
+  <div class="nav-buttons">
+    <a href="petition.html"><button>Petition</button></a>
+    <a href="doctrine.html"><button>Doctrine</button></a>
+    <a href="chronograph.html"><button>Chronograph</button></a>
+    <a href="heroes.html"><button>Heroes</button></a>
+    <a href="glossary.html"><button>Glossary</button></a>
+    <a href="downloads.html"><button>Downloads</button></a>
+    <a href="contact.html"><button>contact</button></a>
+    <a href="about.html"><button>About</button></a>
+  </div>
+
+</section>
+
       <div class="badge">Coming soon</div>
       <h1>Systemic Conflict Convergence</h1>
       <h2>Central knowledge for conflict‑free justice</h2>
@@ -85,9 +146,8 @@
       </p>
 
       <p class="small">
-        This site will serve as a single, reliable place to learn:
-        what “conflict‑free counsel” requires, how imputation works across institutions,
-        and why neutrality of prosecution and tribunal matters to due process.
+        This site will serve as a single, reliable place to learn: what “conflict‑free counsel” requires,
+        how imputation works across institutions, and why neutrality of prosecution and tribunal matters to due process.
         We aim to turn scattered filings into accessible doctrine and a durable public record.
       </p>
 
@@ -96,10 +156,13 @@
         of SCC’s foundational petition—so lawyers and the curious alike can find the essentials quickly.
       </p>
 
+
+
+      <!-- Footer -->
       <div class="footer">
-  <div>Status: Preparing for launch day</div>
-  <div>Contact: SystemicConflictConvergence@gmail.com</div>
-</div>
+        <div>Status: Preparing for launch day</div>
+        <div>Contact: SystemicConflictConvergence@gmail.com</div>
+      </div>
     </section>
   </main>
 </body>
