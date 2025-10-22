@@ -6,38 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-
-.doctrine-table caption {
-  font-size: 1.2rem;   /* adjust as needed */
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-.doctrine-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: 0.95rem;
-}
-
-.doctrine-table th,
-.doctrine-table td {
-  border: 1px solid rgba(255,255,255,0.25);
-  padding: 0.75rem;
-  text-align: left;
-  vertical-align: top;
-}
-
-.doctrine-table th {
-  background: rgba(255,255,255,0.1);
-  font-weight: 600;
-  color: #fff;
-}
-
-.doctrine-table tr:nth-child(even) {
-  background: rgba(255,255,255,0.05);
-}
+    /* Doctrine Table */
+    .doctrine-table caption {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .doctrine-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .doctrine-table th,
+    .doctrine-table td {
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .doctrine-table th {
+      background: rgba(255,255,255,0.1);
+      font-weight: 600;
+      color: #fff;
+    }
+    .doctrine-table tr:nth-child(even) {
+      background: rgba(255,255,255,0.05);
+    }
 
     /* Page background and text */
     html, body {
@@ -56,7 +52,7 @@
       padding: 2rem;
     }
     .card {
-      max-width: 900px; /* wider for long text */
+      max-width: 900px;
       background: rgba(0,0,0,0.35);
       border: 1px solid rgba(255,255,255,0.2);
       border-radius: 12px;
@@ -93,7 +89,7 @@
       text-align: center;
     }
 
-    /* Nav buttons (reuse from index) */
+    /* Nav buttons (reuse from index/heroes) */
     .nav-buttons {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -116,6 +112,30 @@
     .nav-buttons a:hover {
       background: rgba(255,255,255,0.25);
     }
+
+.nav-header {
+  text-align: center;
+  font-size: 2rem;     /* adjust size if you want it bigger */
+  font-weight: 700;    /* bold */
+  margin: 1rem 0;      /* spacing above and below */
+  color: #fff;         /* keep consistent with your theme */
+}
+
+    /* Doctrine profile sections */
+    .doctrine-profile {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 5px solid rgba(255,255,255,0.2);
+    }
+
+    /* Big page title */
+    .page-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 2rem 0 1rem;
+      color: #fff;
+    }
   </style>
 </head>
 
@@ -124,7 +144,7 @@
     <section class="card">
 
       <!-- Navigation -->
-      <h2 class="nav-header">Explore the Chambers</h2>
+      <h1 class="nav-header">Systemic Conflict Convergence Doctrine</h1>
       <div class="nav-buttons">
         <a href="index.html">Home</a>
         <a href="petition.html">Petition</a>
@@ -135,6 +155,7 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
+
 
       <!-- Doctrine Content -->
       <h1>Systemic Conflict Convergence (SCC): Prospects for Fixing and Reforming the Law</h1>
