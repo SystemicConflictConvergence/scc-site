@@ -2,10 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Systemic Conflict Convergence – Coming Soon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+
+.doctrine-table caption {
+  font-size: 2rem;   /* adjust as needed */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;   /* optional: center it */
+
+}
+
+.doctrine-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.doctrine-table th,
+.doctrine-table td {
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.doctrine-table th {
+  background: rgba(255,255,255,0.1);
+  font-weight: 600;
+  color: #fff;
+}
+
+.doctrine-table tr:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
     /* Page background and text */
     html, body {
       height: 100%;
@@ -23,111 +57,280 @@
       padding: 2rem;
     }
     .card {
-      max-width: 720px;
+      max-width: 900px; /* wider for long text */
       background: rgba(0,0,0,0.35);
       border: 1px solid rgba(255,255,255,0.2);
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-      text-align: center;
+      line-height: 1.6;
     }
 
-    /* Headings and text */
+    /* Headings */
     h1 {
-      margin: 0 0 0.75rem 0;
+      margin-top: 0;
       font-size: 2rem;
       letter-spacing: 0.3px;
     }
     h2 {
-      margin: 0.25rem 0 1.25rem 0;
-      font-size: 1.15rem;
+      margin-top: 2rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: #e6e6e6;
     }
 
+    /* Paragraphs */
+    p {
+      margin: 0 0 1rem 0;
+    }
+
     /* Footer */
     .footer {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       font-size: 0.85rem;
       opacity: 0.85;
       border-top: 1px solid rgba(255,255,255,0.15);
       padding-top: 1rem;
+      text-align: center;
     }
 
-    /* Links */
-    a {
-      color: #c9e6ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Badge */
-    .badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 999px;
-      padding: 0.35rem 0.75rem;
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Nav buttons as a grid */
+    /* Nav buttons (reuse from index) */
     .nav-buttons {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 0.75rem;
-      margin: 1.5rem auto;
+      margin: 1.5rem auto 2rem auto;
       max-width: 600px;
-      text-align: center;
     }
-    .nav-buttons button {
+    .nav-buttons a {
+      display: inline-block;
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.25);
       border-radius: 6px;
       padding: 0.5rem 1rem;
       color: #fff;
       font-size: 0.95rem;
-      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
       transition: background 0.2s ease;
-      width: 100%;
     }
-    .nav-buttons button:hover {
+
+    .nav-buttons a:hover {
       background: rgba(255,255,255,0.25);
     }
+
+.hero-profile {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 5px solid rgba(255,255,255,0.2);
+    }
+
+.page-title {
+  text-align: center;   /* centers the text */
+  font-size: 3rem;      /* make it big */
+  font-weight: 800;     /* extra bold */
+  margin: 2rem 0 1rem;  /* spacing above/below */
+  color: #fff;          /* white text */
+}
+
   </style>
 </head>
 
 <body>
   <main class="wrap">
-    <section class="card" role="region" aria-label="SCC placeholder page">
+    <section class="card">
 
-      <!-- ✅ Navigation Header -->
-      <h2 class="nav-header">Explore the Chambers</h2>
+      <!-- Navigation -->
+      <h1 class="page-title">Hall of Pro Se Heroes</h1>
       <div class="nav-buttons">
-        <a href="index.html"><button>Home</button></a>
-        <a href="petition.html"><button>Petition</button></a>
-        <a href="doctrine.html"><button>Doctrine</button></a>
-        <a href="chronograph.html"><button>Chronograph</button></a>
-        <a href="heroes.html"><button>Heroes</button></a>
-        <a href="glossary.html"><button>Glossary</button></a>
-        <a href="downloads.html"><button>Downloads</button></a>
-        <a href="contact.html"><button>Contact</button></a>
-        <a href="about.html"><button>About</button></a>
+        <a href="index.html">Home</a>
+        <a href="petition.html">Petition</a>
+        <a href="chronograph.html">Chronograph</a>
+        <a href="doctrine.html">Doctrine</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
 
-      <!-- ✅ Placeholder Content -->
-      <div class="badge">Coming Soon</div>
-      <h1>This Chamber is Being Prepared</h1>
-      <h2>Please return to the main halls above to continue exploring.</h2>
+
+
+      <!-- Hero Content -->
+
+<table class="doctrine-table heroes-table">
+  <caption>Heroes and Their Legacies</caption>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Pro Se Hero</th>
+      <th>Case</th>
+      <th>Year</th>
+      <th>Change</th>
+      <th>Legacy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Clarence Earl Gideon</td>
+      <td>Gideon v. Wainwright</td>
+      <td>1963</td>
+      <td>Right to counsel in felony cases</td>
+      <td>Universal counsel mandate for indigent defendants</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Ernesto Miranda</td>
+      <td>Miranda v. Arizona</td>
+      <td>1966</td>
+      <td>Required warnings before custodial interrogation</td>
+      <td>Everyday police procedure; rights read in every arrest</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Anthony Faretta</td>
+      <td>Faretta v. California</td>
+      <td>1975</td>
+      <td>Right to self-representation in criminal trials</td>
+      <td>Defined the constitutional standard for pro se defendants</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Samuel H. Sloan</td>
+      <td>SEC v. Sloan</td>
+      <td>1978</td>
+      <td>Limits on indefinite administrative suspensions</td>
+      <td>High court win argued pro se; due process guardrails for agencies</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>William Johnson</td>
+      <td>Johnson v. Avery</td>
+      <td>1969</td>
+      <td>Protection for jailhouse lawyering</td>
+      <td>Preserved inmate legal assistance where states provide no alternative</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Robert (Bobby) Smith</td>
+      <td>Bounds v. Smith</td>
+      <td>1977</td>
+      <td>Access to courts via libraries or assistance</td>
+      <td>Institutional duty to equip prisoners to litigate</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Francis Haines</td>
+      <td>Haines v. Kerner</td>
+      <td>1972</td>
+      <td>“Less stringent standards” for pro se pleadings</td>
+      <td>Bedrock rule: courts read pro se filings liberally</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Keith (Prentiss) Houston</td>
+      <td>Houston v. Lack</td>
+      <td>1988</td>
+      <td>Prison mailbox rule for filing deadlines</td>
+      <td>Prevents filings from being lost to prison delays</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>William Smith</td>
+      <td>Smith v. Barry</td>
+      <td>1992</td>
+      <td>Informal brief can serve as a notice of appeal</td>
+      <td>Saves pro se appeals from technical dismissal</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>James Blumstein</td>
+      <td>Dunn v. Blumstein</td>
+      <td>1972</td>
+      <td>Struck down strict residency rules for voting</td>
+      <td>Expanded democratic participation nationwide</td>
+    </tr>
+
+
+
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="6">
+        This list of heroes represents what is possible when one person insists on their fundamental constitutional rights, proof that even a single voice, carried through the courts, can reshape the law and leave a legacy for generations.
+      </td>
+    </tr>
+  </tfoot>
+</table>
+      <h1>The Pro Se, The Myth and The Legends</h1>
+<section class="hero-profile">
+      <h2>1. Clarence Earl Gideon, Gideon v. Wainwright, 372 U.S. 335 (1963).</h2>
+      <p>Clarence Earl Gideon was not a lawyer, not a scholar, and not a man of privilege. He was a drifter, a pool hall regular in Panama City, Florida, who had spent much of his life on the margins of society. Poor, undereducated, and often in trouble with the law, Gideon was the kind of man the system overlooked. Yet he carried within him a stubborn sense of fairness and the belief that even someone like him deserved a fair chance in court.</p>
+      <p>In 1961, Gideon was arrested for breaking into a pool hall and stealing coins from a cigarette machine. At trial, he asked the judge to appoint him a lawyer because he could not afford one. The request was denied under Florida law, which only provided counsel in capital cases. Forced to defend himself, Gideon was convicted and sentenced to five years. From his prison cell, he hand wrote a petition to the U.S. Supreme Court, Gideon v. Wainwright (1963). The Court ruled unanimously that the Sixth Amendment guarantees the right to counsel in felony cases, and that states must provide attorneys to indigent defendants.</p>
+      <p>Gideon’s persistence reshaped American criminal law. His case established the universal mandate that no one should face the power of the state without the aid of counsel. Today, every indigent defendant charged with a serious crime has the right to a court appointed lawyer because a poor man with a pencil and prison stationery refused to accept silence. Gideon’s name has become shorthand for fairness in the justice system, proof that even the most ordinary citizen can bend the Constitution toward justice.</p>
+<section class="hero-profile">
+      <h2>2. Ernesto Arturo Miranda, Miranda v. Arizona, 384 U.S. 436 (1966).</h2>
+      <p>Ernesto Arturo Miranda was a 23 year old laborer from Phoenix, Arizona. He had grown up in poverty, dropped out of school early, and drifted through a series of low paying jobs. His life was marked by instability and brushes with the law, but he was not a man of power or privilege. He was ordinary, vulnerable, and like many poor defendants of his era, he had little understanding of the legal system that would soon engulf him.</p>
+      <p>In 1963, Miranda was arrested on suspicion of kidnapping and rape. After two hours of police interrogation, he signed a confession, but he had never been told he had the right to remain silent or the right to an attorney. Convicted largely on that confession, Miranda appealed. From prison, he filed his own petition, acting pro se at the critical stage that brought his case to the U.S. Supreme Court. In Miranda v. Arizona (1966), the Court ruled 5–4 that the Fifth Amendment’s protection against self incrimination requires police to inform suspects of their rights before custodial interrogation. This ruling created what we now call the “Miranda warnings.”</p>
+      <p>Miranda’s name became a verb in American law. Today, every arrest begins with the familiar words: “You have the right to remain silent. You have the right to an attorney.” His case reshaped police procedure nationwide, embedding constitutional rights into the daily rhythm of law enforcement. Though Ernesto Miranda himself lived a troubled life after his release, his persistence ensured that millions of others would never again face interrogation without knowing their rights. His story is proof that even a man with little education and no lawyer can leave a mark on the Constitution itself.</p>
+<section class="hero-profile">
+      <h2>3. Anthony Pasquall Faretta, Faretta v. California, 422 U.S. 806 (1975).</h2>
+      <p>Anthony Pasquall Faretta was not a lawyer, not a professor, not a man of influence. He was a working class Californian, a man of modest means who found himself accused of grand theft. What set him apart was not education or privilege, but conviction: he believed he could speak for himself better than any court appointed lawyer. To many, that seemed reckless. To Faretta, it was a matter of dignity and autonomy, the belief that no one should be forced to let another voice speak in their place.</p>
+      <p>When Faretta asked to represent himself at trial, the California courts denied him, insisting that only trained lawyers could navigate the system. He refused to yield. His case rose to the U.S. Supreme Court, where in Faretta v. California (1975), the justices ruled 6–3 that the Sixth Amendment guarantees a defendant the right to self representation in criminal trials, so long as the choice is made knowingly and voluntarily. The Court recognized that forcing counsel on an unwilling defendant was itself a violation of constitutional liberty.</p>
+      <p>Faretta’s name became immortalized in law. Every time a judge conducts a “Faretta hearing” to ensure a defendant understands the risks of going pro se, his stand is remembered. His case defined the constitutional standard for self representation, balancing autonomy with fairness. Though Faretta himself was an ordinary man, his insistence on speaking for himself carved a permanent place in the Constitution, a reminder that the right to one’s own voice is as fundamental as the right to counsel.</p>
+<section class="hero-profile">
+      <h2>4. Samuel H. Sloan, SEC v. Sloan, 436 U.S. 103 (1978).</h2>
+      <p>Samuel Howard Sloan was not a lawyer, not a professor, not even a man with formal legal training. He was a small time broker and independent thinker, a restless spirit who moved between finance, publishing, and even the world of competitive chess. What defined him was persistence and a refusal to be silenced by institutions larger than himself. He had no bar card, no firm behind him, only the conviction that he could read the rules, understand them, and stand up to the government on his own terms.</p>
+      <p>In the 1970s, Sloan found himself in conflict with the Securities and Exchange Commission. The SEC had begun issuing back to back 10 day trading suspensions on certain securities, effectively freezing trading indefinitely without judicial review. Sloan, who held shares in one of the targeted companies, believed this practice was unlawful. Representing himself, he filed suit and carried the case all the way to the U.S. Supreme Court. In SEC v. Sloan (1978), he personally argued before the justices, one of the last non lawyers ever to do so, and won. The Court unanimously ruled that the SEC could not string together temporary suspensions to create an endless ban, placing due process guardrails on administrative power.</p>
+      <p>Sloan’s victory stands as a rare and shining example of a citizen, without counsel, prevailing at the highest court in the land. His case is still cited in administrative law for the principle that agencies cannot evade judicial scrutiny through procedural tricks. Beyond the doctrine, Sloan’s story embodies the spirit of the pro se hero: an ordinary man who walked into the marble chamber alone and left with a precedent that curbed government overreach. His name reminds us that even without a law degree, persistence and clarity can change the law itself.</p>
+<section class="hero-profile">
+      <h2>5. William Joe Johnson, Johnson v. Avery, 393 U.S. 483 (1969).</h2>
+      <p>William Joe Johnson was serving a life sentence in the Tennessee State Penitentiary. He was not a lawyer, but he had taught himself enough law to help fellow inmates draft petitions and writs. In a world where many prisoners were illiterate or lacked even the most basic understanding of legal procedure, Johnson became a lifeline. His willingness to assist others was not about profit or prestige, it was about solidarity. For that, prison officials punished him, confiscating his materials and placing him in solitary confinement. Johnson was, at heart, a man who refused to let silence be imposed on those around him.</p>
+      <p>Tennessee had a regulation forbidding inmates from helping each other with legal work. Johnson’s defiance of this rule led to his punishment, but also to his lawsuit. Acting on his own behalf, he challenged the regulation in federal court. The case rose to the U.S. Supreme Court as Johnson v. Avery (1969). In a 7–2 decision, the Court struck down the ban, holding that unless the state provided a reasonable alternative, such as law libraries or trained legal aides, it could not forbid inmates from assisting one another. Justice Abe Fortas wrote that it is “fundamental that access of prisoners to the courts for the purpose of presenting their complaints may not be denied or obstructed.”</p>
+      <p>Johnson’s victory legitimized the role of the “jailhouse lawyer” and ensured that prisoners without education or resources could still reach the courts. His case became the foundation for later rulings like Bounds v. Smith (1977), which required prisons to provide law libraries or legal assistance. Even today, many habeas petitions and civil rights suits are drafted by inmates helping one another, a direct legacy of Johnson’s courage. By standing up against a rule designed to suppress voices, William Joe Johnson preserved the right of the incarcerated to petition for justice, making him one of the true pro se heroes.</p>
+<section class="hero-profile">
+      <h2>6. Robert (Bobby) Smith, Bounds v. Smith, 430 U.S. 817 (1977).</h2>
+      <p>Robert “Bobby” Smith was an inmate in the North Carolina prison system during the 1970s. Like many prisoners, he had little formal education and no lawyer to guide him. What he did have was determination: he wanted to challenge the conditions of his confinement and the denial of meaningful access to the courts. Smith was not a trained advocate, but he understood something essential, without legal resources, prisoners were effectively cut off from the Constitution. His willingness to press this claim made him the voice for thousands of others who lacked the tools to be heard.</p>
+      <p>Smith and other inmates filed suit against Vernon Lee Bounds, the state’s Commissioner of Correction, arguing that North Carolina’s prisons deprived them of any real way to prepare legal papers. Most units had no law libraries, no legal assistance, and no resources for indigent prisoners. Their case rose to the U.S. Supreme Court as Bounds v. Smith (1977). In a 6–3 decision, Justice Thurgood Marshall wrote that the fundamental constitutional right of access to the courts requires prison authorities to provide either adequate law libraries or adequate legal assistance. The Court refused to retreat from Johnson v. Avery (1969) and instead expanded it, placing an affirmative duty on states to equip prisoners with the tools to litigate. Smith’s persistence transformed a personal grievance into a national standard.</p>
+      <p>The ruling in Bounds forced states across the country to build prison law libraries, create legal aid programs, or contract with attorneys to meet the constitutional requirement. Though later narrowed by Lewis v. Casey (1996), the principle remains: the state cannot silence prisoners by denying them the means to reach the courts. Robert Smith’s name may not headline the case, but his fight ensured that the right of access to justice is not theoretical but real. His courage inscribed into law the idea that even those behind walls must be given the tools to speak to the Constitution.</p>
+<section class="hero-profile">
+      <h2>7. Francis Haines, Haines v. Kerner, 404 U.S. 519 (1972).</h2>
+      <p>Francis Haines was an inmate at the Illinois State Penitentiary in Menard during the late 1960s. He was not a lawyer, nor did he have much formal education, but he was a man who believed his suffering should not be ignored. After a fight with another prisoner, Haines was placed in solitary confinement. There, he claimed, he was forced to sleep on the floor with only blankets, which aggravated a pre existing foot injury and circulatory problems. He also alleged that the disciplinary process that put him there denied him basic fairness. Haines was an ordinary prisoner, but he had the courage to put pen to paper and file a civil rights complaint on his own.</p>
+      <p>Haines sued Illinois officials, including then Governor Otto Kerner, under 42 U.S.C. § 1983, seeking damages for the injuries and constitutional violations he endured. His complaint was dismissed by the district court for “failure to state a claim,” and the Seventh Circuit affirmed, emphasizing deference to prison officials. But Haines persisted, and his case reached the U.S. Supreme Court as Haines v. Kerner (1972). In a short per curiam opinion, the Court reversed, holding that pro se complaints, “however inartfully pleaded,” must be held to less stringent standards than those drafted by lawyers. The justices ruled that Haines should have been given the chance to present evidence on his claims rather than being dismissed outright.</p>
+      <p>The principle announced in Haines v. Kerner became a bedrock rule of American law: courts must read pro se filings liberally. This doctrine has protected generations of self represented litigants, especially prisoners, from having their cases thrown out on technicalities. Even today, judges cite Haines when explaining why they will give a pro se complaint the benefit of the doubt. Francis Haines may not have won damages for his own suffering, but his persistence ensured that every self represented litigant who comes after him is given a fairer hearing. His name stands as a shield for those who cannot afford a lawyer but still demand justice.</p>
+<section class="hero-profile">
+      <h2>8. Keith (Prentiss) Houston, Houston v. Lack, 487 U.S. 266 (1988).</h2>
+      <p>Keith Houston was an inmate in a Tennessee prison in the 1980s. Like many incarcerated men, he had no lawyer to guide him and little control over the bureaucratic machinery that surrounded him. What he did have was determination: he wanted to appeal the dismissal of his habeas corpus petition. Houston was not a trained advocate, but he understood that the right to appeal meant nothing if prison delays could erase it. His story is the story of a man who refused to let the walls around him also wall off his access to justice.</p>
+      <p>After losing in district court, Houston prepared a notice of appeal. He gave it to prison officials for mailing 27 days after judgment, well within the 30 day deadline. But the clerk stamped it “filed” on day 31, one day late, and the Court of Appeals dismissed his case as untimely. Houston pressed on, and his case reached the U.S. Supreme Court as Houston v. Lack (1988). In a 5–4 decision, Justice William Brennan wrote that for pro se prisoners, a notice of appeal is deemed filed at the moment it is delivered to prison authorities for mailing. The Court recognized that once a prisoner hands over his papers, he has no control over delays, and it would be unjust to punish him for what he cannot change.</p>
+      <p>The “prison mailbox rule” born from Houston’s case remains a cornerstone of procedural fairness. It ensures that incarcerated litigants are not silenced by the slow gears of prison mailrooms. Federal Rule of Appellate Procedure 4(c) now codifies this principle, and countless appeals and habeas petitions have been preserved because of it. Keith Houston’s name may not be widely known outside legal circles, but every time a judge accepts a prisoner’s filing as timely because it was handed to a guard on time, his legacy lives on. He proved that even in confinement, persistence can reshape the rules of justice.</p>
+<section class="hero-profile">
+      <h2>9. William Lewis Smith, Smith v. Barry, 502 U.S. 244 (1992).</h2>
+      <p>William Lewis Smith was an inmate at the Maryland State Penitentiary in the late 1980s. He lived with chronic medical issues and alleged mistreatment by prison staff, including denial of a wheelchair and excessive force. Like many incarcerated men, he had little legal training and no steady access to counsel. Yet he was determined to press his civil rights claims under 42 U.S.C. § 1983. Smith was not a polished advocate, but he was persistent, and he believed that even a prisoner’s voice deserved to be heard in the courts.</p>
+      <p>Smith’s lawsuit against prison officials and medical staff went to trial, where he won a partial verdict. But when he tried to appeal, he stumbled into a procedural trap. His first notice of appeal was premature and invalid. The Fourth Circuit clerk then sent him the standard “informal brief” form used for pro se appellants. Smith returned the brief within the 30 day deadline, but the Court of Appeals dismissed his case, ruling that a brief could never substitute for a notice of appeal. Smith pressed on, and the Supreme Court took his case as Smith v. Barry (1992). In an 8–1 decision, Justice Sandra Day O’Connor wrote that a document intended as an appellate brief may serve as the functional equivalent of a notice of appeal, so long as it is timely and contains the required information.</p>
+      <p>Smith’s persistence created a vital safeguard for pro se litigants. His case established that courts must look to the substance of a filing, not just its label, when deciding if an appeal is valid. This “functional equivalence” doctrine has saved countless appeals from dismissal, ensuring that self represented litigants are not shut out of appellate review because they used the wrong form or title. William Smith’s name may not be widely known, but every time a pro se appeal survives on the strength of its substance rather than its formatting, his legacy is at work.</p>
+<section class="hero-profile">
+      <h2>10. James F. Blumstein, Dunn v. Blumstein, 405 U.S. 330 (1972).</h2>
+      <p>James F. Blumstein was only in his late twenties when he moved to Nashville in 1970 to begin teaching at Vanderbilt Law School. A newcomer to Tennessee, he quickly discovered that the state’s voting laws required a full year of residence in the state and three months in the county before a citizen could register to vote. Blumstein was a scholar, not a politician, but he was also a citizen who believed deeply in democratic participation. He refused to accept that his voice should be silenced simply because he was new to the community. With no lawyer representing him, he decided to challenge the law himself.</p>
+      <p>Blumstein filed suit against Governor Winfield Dunn and other state officials, arguing that Tennessee’s durational residency requirements violated the Equal Protection Clause of the Fourteenth Amendment. His case rose to the U.S. Supreme Court as Dunn v. Blumstein (1972). In a 6–1 decision, Justice Thurgood Marshall wrote for the Court that the law was unconstitutional. The justices held that voting is a fundamental right, and durational residency rules penalize the constitutional right to travel without serving a compelling state interest. Tennessee’s justifications, preventing fraud and ensuring “knowledgeable voters”, could be achieved by less restrictive means, such as a 30 day registration cutoff. Blumstein, arguing pro se, had convinced the highest court in the land to strike down a barrier that disenfranchised countless new residents.</p>
+      <p>The ruling in Dunn v. Blumstein reshaped voting rights across the United States. States with long residency requirements were forced to repeal them, and today most jurisdictions use a 30 day registration deadline, a direct legacy of Blumstein’s case. His victory ensured that Americans who move for work, school, or family are not denied their voice in democracy. Though he went on to a distinguished career as a constitutional scholar, Blumstein’s most enduring contribution came from his own handwritten petition and oral argument. His case stands as proof that even a single citizen, newly arrived and standing alone, can expand the franchise for millions.</p>
+
+<!-- Honorable Mentions -->
+<div class="hero-profile">
+  <h2>Honorable Meantions</h2>
+  <p><strong>Thomas Wornick</strong><br>
+  Before the Colorado Supreme Court in case <em>2025SA300</em>, Thomas Wornick fights to restore four years of systemic conflict convergence, where his rights were sacrificed to protect corruption. His campaign reframes silence as evidence, and his filings weaponize doctrine to expose institutional failure. A steward in motion, not just a petitioner.</p>
+
+
+
 
       <!-- Footer -->
       <div class="footer">
-        <div>Status: Placeholder</div>
-        <div>Contact: SystemicConflictConvergence@gmail.com</div>
+        <div>Status: ?</div>
+        <div>Contact: ?</div>
       </div>
+
     </section>
   </main>
 </body>
